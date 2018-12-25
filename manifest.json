@@ -1,0 +1,46 @@
+{
+	"name":"VK",
+	"info":{"en": "The module allows you to interact with Official VK API", "ru": "Модуль позволяет взаимодействовать с официальным API ВКонтакте"},
+	"icon": "vk.png",
+	"description":"Interact with VK API",
+	"description_small":{"en": "VK", "ru": "ВКонтакте"},
+	"major_version": 1,
+	"minor_version": 0,
+	"developer_name": "Oyasumi Punpun", 
+	"developer_email": "likangt2012@gmail.com", 
+	"developer_site": "https://github.com/CheshireCaat",
+	"api_version": 1,
+	"actions":
+	[
+
+		{
+			"name":"Messages_Send",
+			"description":{"en": "Send Message","ru": "Отправить Сообщение"},
+			"template": "{{Message}}",
+			"is_element": false,
+			"interface": "messages_send_interface.js",
+			"select": "messages_send_select.js",
+			"code": [{"file":"messages_send_code.js", "name": "messages_send_code"}]
+		}
+
+		{
+			"name":"Auth_Token",
+			"description":{"en": "Get Access-Token","ru": "Получить Access-Token"},
+			"template": "{{Message}}",
+			"is_element": false,
+			"interface": "token_get_interface.js",
+			"select": "token_get_select.js",
+			"code": [{"file":"token_get_code.js", "name": "token_get_code"}]
+		}
+		
+	],
+	"localize": 
+	{
+		"Token": {"ru":"Access-Token аккаунта"},
+		"User Id": {"ru":"Id пользователя"},
+		"Message text": {"ru":"Текст сообщения"}
+	},
+	"engine": [],
+	"browser": [],
+	"depends": []	
+}
