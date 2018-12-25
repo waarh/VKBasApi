@@ -5,7 +5,7 @@
 	"description":"Interact with VK API",
 	"description_small":{"en": "VK", "ru": "ВКонтакте"},
 	"major_version": 1,
-	"minor_version": 0,
+	"minor_version": 1,
 	"developer_name": "Oyasumi Punpun", 
 	"developer_email": "likangt2012@gmail.com", 
 	"developer_site": "https://github.com/CheshireCaat",
@@ -14,7 +14,16 @@
 	[
 
 		{
-			"name":"Messages_Send",
+			"name":"VK_Auth_Token",
+			"description":{"en": "Get Access-Token","ru": "Получить Access-Token"},
+			"template": "{{Variable}}",
+			"is_element": false,
+			"interface": "token_get_interface.js",
+			"select": "token_get_select.js",
+			"code": [{"file":"token_get_code.js", "name": "token_get_code"}]
+		},
+		{
+			"name":"VK_Messages_Send",
 			"description":{"en": "Send Message","ru": "Отправить Сообщение"},
 			"template": "{{Message}}",
 			"is_element": false,
@@ -22,23 +31,17 @@
 			"select": "messages_send_select.js",
 			"code": [{"file":"messages_send_code.js", "name": "messages_send_code"}]
 		}
-
-		{
-			"name":"Auth_Token",
-			"description":{"en": "Get Access-Token","ru": "Получить Access-Token"},
-			"template": "{{Message}}",
-			"is_element": false,
-			"interface": "token_get_interface.js",
-			"select": "token_get_select.js",
-			"code": [{"file":"token_get_code.js", "name": "token_get_code"}]
-		}
 		
 	],
 	"localize": 
 	{
 		"Token": {"ru":"Access-Token аккаунта"},
 		"User Id": {"ru":"Id пользователя"},
-		"Message text": {"ru":"Текст сообщения"}
+		"Message text": {"ru":"Текст сообщения"},
+		"Account Login": {"ru":"Логин аккаунта"},
+		"Account Password": {"ru":"Пароль аккаунта"},
+		"Client Id": {"ru":"Id приложения"},
+		"Client Secret": {"ru":"Ключ приложения"}
 	},
 	"engine": [],
 	"browser": [],
